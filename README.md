@@ -30,22 +30,6 @@ LJ Fresh Stylez provides a variety of barbering and grooming services, including
 - Hair Styling
 - General Grooming
 
-## Products
-
-The website also provides information about grooming products, including:
-
-- Hair Pomade
-- Hair Styling Gel
-- Hair Wax
-- Hair Moisturiser
-- Beard Oil
-- Beard Balm
-- Beard Shampoo
-- Beard Conditioner
-- Aftershave
-- Shaving Cream
-- Hair Brushes
-- Combs
 
 ## Contact Information
 
