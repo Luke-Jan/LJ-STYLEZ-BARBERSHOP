@@ -13,7 +13,6 @@ The website contains the following pages:
 - Home
 - About Us
 - Services
-- Products
 - Enquiry
 - Contact Us
 
@@ -44,8 +43,6 @@ LJ Fresh Stylez provides a variety of barbering and grooming services, including
 The website was developed using:
 
 - HTML
-- CSS
-- JavaScript
 
 ## Project Structure
 
@@ -54,17 +51,14 @@ LJ-Fresh-Stylez-Website
 │
 ├── index.html
 │
-├── css
 │
 ├── documents
 │
 ├── Images
 │
-├── js
 │
-└── references
+└── Pages
     ├── about.html
     ├── contact.html
     ├── enquiry.html
-    ├── products.html
     └── services.html
