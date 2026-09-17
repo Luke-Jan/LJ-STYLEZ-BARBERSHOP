@@ -115,3 +115,19 @@ The following corrections were made to the Part 1 HTML files and proposal docume
 - Corrected a missing space and grammar error in the "Our Story" section on `about.html`.
 - Added wireframes for each page to the proposal document, showing the planned layout structure prior to development.
 - Added a sitemap to the proposal document, showing the page hierarchy and navigation structure of the website.
+
+
+### Part 2 — CSS Styling and Responsive Design
+
+- Created an external stylesheet (`style.css`) and linked it to all HTML pages.
+- Added a base CSS style across the website, including a consistent font, colour scheme and box-sizing reset.
+- Added styling for headings and paragraphs, including font sizes, letter spacing and text alignment.
+- Used Flexbox to organise the header, navigation menu and main content areas.
+- Used CSS Grid to arrange the services and grooming lists in a clear layout.
+- Added hover and focus effects to interactive elements such as navigation links and form buttons.
+- Styled the enquiry form, including input fields, select menus and text areas, with consistent spacing and focus effects.
+- Added responsive media queries for tablet screens (`max-width: 48rem`) and mobile screens (`max-width: 30rem`).
+- Used relative units such as `rem`, `%` and `fr` instead of fixed pixel values to help the website adjust to different screen sizes.
+- Made images responsive by using `max-width: 100%` so they can scale down on smaller screens.
+- Added styling for the contact address, embedded Google Maps section and footer to keep them consistent with the website's overall design.
+- Tested the website layout at desktop, tablet and mobile screen sizes using browser developer tools to make sure the content remains readable and usable.
