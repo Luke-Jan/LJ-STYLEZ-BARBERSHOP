@@ -237,3 +237,45 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+
+/* Tablet breakpoint: stack nav vertically and reduce heading sizes */
+@media (max-width: 48rem) {
+    nav {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    h1 {
+        font-size: 1.8rem;
+    }
+ 
+    h2 {
+        font-size: 1.4rem;
+    }
+ 
+    section {
+        padding: 1.25rem;
+    }
+}
+ 
+/* Mobile breakpoint: shrink headings further and stack services grid */
+@media (max-width: 30rem) {
+    header h2 {
+        font-size: 1.3rem;
+    }
+ 
+    h1 {
+        font-size: 1.5rem;
+    }
+ 
+    form {
+        max-width: 100%;
+    }
+ 
+    section ul {
+        grid-template-columns: 1fr;
+    }
+}
+ 
