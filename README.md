@@ -53,7 +53,7 @@ LJ Fresh Stylez provides a variety of barbering and grooming services, including
 ## Project Structure
 
 ```text
-lj-fresh-stylez-website
+LJ STYLEZ BARBERSHOP
 │
 ├── index.html
 ├── README.md
@@ -65,18 +65,18 @@ lj-fresh-stylez-website
 ├── documents
 │
 ├── images
-│   ├── barbershop-logo.png
-│   ├── beard-grooming.jpg
-│   ├── classic-cut.jpg
-│   ├── high-fade.jpg
-│   ├── low-fade.webp
+│   ├── barbershop logo.png
+│   ├── beard grooming.jpg
+│   ├── classic cut.jpg
+│   ├── high fade.jpg
+│   ├── low fade.webp
 │   ├── massage.webp
-│   ├── mid-fade.webp
-│   ├── shape-up.jpg
+│   ├── mid fade.webp
+│   ├── shape up.jpg
 │   ├── shaving.jpg
-│   ├── taper-fade.webp
+│   ├── taper fade.webp
 │   ├── trim.jpg
-│   └── vip-treatment.jpg
+│   └── vip treatment.jpg
 │
 └── pages
     ├── about.html
