@@ -63,3 +63,97 @@ p {
     max-width: 65rem;
     margin: 0 auto 1rem auto;
 }
+
+
+/* Header layout: stack logo above nav and centre everything */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background-color: #111111;
+}
+ 
+header h2 {
+    color: #c9a227;
+    margin-bottom: 0.75rem;
+}
+ 
+/* Navigation links laid out in a row, wrapping on smaller screens */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+ 
+nav a {
+    color: #f1e9dc;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+ 
+nav a:hover,
+nav a:focus {
+    color: #e6c34a;
+}
+ 
+/* Stack all page sections vertically with consistent spacing */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 75rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+ 
+/* Give each section a card-style appearance against the dark background */
+section {
+    background-color: #262220;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border: 1px solid #3a332e;
+}
+ 
+/* Turn service/grooming lists into a responsive grid of cards */
+section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+ 
+/* Style each service card */
+section ul li {
+    text-align: center;
+    background-color: #1f1c1a;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #3a332e;
+    color: #f1e9dc;
+}
+ 
+/* Make service images fill their card width with rounded corners */
+section ul li img {
+    margin: 0.75rem auto 0 auto;
+    border-radius: 0.4rem;
+    width: 100%;
+}
+ 
+/* Remove card styling for the homepage logo image section */
+.image-section {
+    text-align: center;
+    background: none;
+    border: none;
+    padding: 0;
+}
+ 
+/* Widen the homepage logo while keeping it responsive and centred */
+.image-section img {
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+ 
