@@ -131,3 +131,30 @@ The following corrections were made to the Part 1 HTML files and proposal docume
 - Made images responsive by using `max-width: 100%` so they can scale down on smaller screens.
 - Added styling for the contact address, embedded Google Maps section and footer to keep them consistent with the website's overall design.
 - Tested the website layout at desktop, tablet and mobile screen sizes using browser developer tools to make sure the content remains readable and usable.
+
+
+## Responsive Design Screenshot Evidence
+
+Screenshots below show the website at desktop, tablet and mobile screen widths, confirming the responsive breakpoints work as intended.
+
+### Home Page
+
+**Desktop (1440px)**
+[Home page desktop view](documents/screenshots/home desktop.png)
+
+**Tablet (768px)**
+[Home page tablet view](documents/screenshots/home tablet.png)
+
+**Mobile (400px)**
+[Home page mobile view](documents/screenshots/home mobile.png)
+
+### Services Page
+
+**Desktop (1440px)**
+[Services page desktop view](documents/screenshots/service desktop.png)
+
+**Tablet (768px)**
+[Services page tablet view](documents/screenshots/service tablet.png)
+
+**Mobile (400px)**
+[Services page mobile view](documents/screenshots/service mobile.png)
