@@ -20,17 +20,17 @@ The website contains the following pages:
 
 LJ Fresh Stylez provides a variety of barbering and grooming services, including:
 
-- Classic Haircut – R70
-- Low Fade – R120
-- Mid Fade – R150
-- High Fade – R200
-- Taper Fade – R100
-- Beard Trim – R90
-- Beard Shape Up – R80
-- Full Beard Grooming – R150
-- Hairline Clean Up & Massage – R200
-- Shaving – R140
-- General Grooming – R350
+- classic haircut – R70
+- low fade – R120
+- mid fade – R150
+- high fade – R200
+- taper fade – R100
+- beard trim – R90
+- beard shape Up – R80
+- full beard grooming – R150
+- hairline clean Up & massage – R200
+- shaving – R140
+- general grooming – R350
 
 ## Contact Information
 
