@@ -142,6 +142,7 @@ Screenshots below show the website at desktop, tablet and mobile screen widths, 
 **Desktop (1440px)**
 [Home page desktop view](documents/screenshots/home desktop.png)
 
+
 **Tablet (768px)**
 [Home page tablet view](documents/screenshots/home tablet.png)
 
@@ -158,3 +159,4 @@ Screenshots below show the website at desktop, tablet and mobile screen widths, 
 
 **Mobile (400px)**
 [Services page mobile view](documents/screenshots/service mobile.png)
+

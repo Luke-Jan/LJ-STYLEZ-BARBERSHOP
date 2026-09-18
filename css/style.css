@@ -140,6 +140,8 @@ section ul li img {
     margin: 0.75rem auto 0 auto;
     border-radius: 0.4rem;
     width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
  
 /* Remove card styling for the homepage logo image section */
