@@ -4,108 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact LJ Fresh Stylez barber shop at 100 Harrington Street, Salt Lake, Gqeberha. Opening hours, phone, email, map and message form.">
     <title>LJ FRESH STYLEZ | CONTACT US</title>
+
+    <!-- PART 3 (SEO): canonical, favicon, Open Graph -->
+    <link rel="canonical" href="https://YOUR-SITE-URL/pages/contact.html">
+    <link rel="icon" href="../images/barbershop-Logo.png.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | LJ Fresh Stylez">
+    <meta property="og:description" content="Find LJ Fresh Stylez in Salt Lake, Gqeberha: opening hours, phone, map and message form.">
+    <meta property="og:url" content="https://YOUR-SITE-URL/pages/contact.html">
+    <meta property="og:image" content="https://YOUR-SITE-URL/images/barbershop-Logo.png.png">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- PART 3 (SEO): structured data for local search -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "LJ Fresh Stylez",
+        "url": "https://YOUR-SITE-URL/",
+        "image": "https://YOUR-SITE-URL/images/barbershop-Logo.png.png",
+        "telephone": "+27661817197",
+        "email": "ljfreshstylez@gmail.com",
+        "priceRange": "R70 - R350",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "100 Harrington Street",
+            "addressLocality": "Salt Lake, Gqeberha",
+            "addressCountry": "ZA"
+        },
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "14:00" }
+        ]
+    }
+    </script>
 </head>
 
 <body>
+
     <header>
+        <p class="logo">LJ FRESH STYLEZ</p>
 
-        <!-- Business Name -->
-        <h2>LJ FRESH STYLEZ</h2>
-
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="services.html">SERVICES</a>
+            <a href="enquiry.html">ENQUIRY</a>
+            <a href="contact.html" aria-current="page">CONTACT US</a>
+        </nav>
     </header>
 
-    <!-- Navigation links -->
-    <nav>
-
-        <a href="../index.html">HOME</a>
-        <a href="about.html">ABOUT US</a>
-        <a href="services.html">SERVICES</a>
-        <a href="enquiry.html">ENQUIRY</a>
-        <a href="contact.html">CONTACT US</a>
-
-    </nav>
-
-    <!-- Main section -->
     <main>
 
-        <!-- Contact Introduction -->
         <section>
-
-            <h1>
-                CONTACT LJ FRESH STYLEZ
-            </h1>
+            <h1>CONTACT LJ FRESH STYLEZ</h1>
 
             <p>
                 We would love to hear from you. If you have any questions
-                about our barbering services, products or business hours,
-                please feel free to contact LJ Fresh Stylez.
+                about our barbering services or business hours, please feel
+                free to contact LJ Fresh Stylez.
             </p>
-
         </section>
 
-        <!-- Contact Details -->
         <section>
-
             <h2>CONTACT DETAILS</h2>
 
             <p>
                 <strong>Phone:</strong>
-                0661817197
+                <a href="tel:+27661817197">066 181 7197</a>
             </p>
 
             <p>
                 <strong>Email:</strong>
-                ljfreshstylez@gmail.com
+                <a href="mailto:ljfreshstylez@gmail.com">ljfreshstylez@gmail.com</a>
             </p>
 
             <p>
                 <strong>Address:</strong>
                 100 Harrington Street, Salt Lake, Gqeberha, South Africa
             </p>
-
         </section>
 
-        <!-- Contact Form -->
         <section>
-
-            <h2>SEND US A MESSAGE</h2>
-
-            <form action="#" method="post">
-
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name"
-                       placeholder="Enter your full name" required>
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email"
-                       placeholder="Enter your email address" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone"
-                       placeholder="Enter your phone number">
-
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject"
-                       placeholder="Enter the subject" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6"
-                          placeholder="Enter your message here..."
-                          required></textarea>
-
-                <button type="submit">SEND MESSAGE</button>
-                <button type="reset">CLEAR FORM</button>
-
-            </form>
-
-        </section>
-
-        <!-- Business Hours -->
-        <section>
-
             <h2>BUSINESS HOURS</h2>
 
             <ul>
@@ -113,75 +98,88 @@
                 <li>Saturday: 08:00 - 16:00</li>
                 <li>Sunday: 10:00 - 14:00</li>
             </ul>
-
         </section>
 
-        <!-- Location -->
         <section>
-
-            <h2>OUR LOCATION</h2>
-
-            <p>
-                Visit LJ Fresh Stylez at 100 Harrington Street, Salt Lake.
-                We look forward to welcoming you and giving you a fresh,
-                clean and professional look.
-            </p>
-
-        </section>
-
-        <!-- Get In Touch -->
-        <section>
-
-            <h2>GET IN TOUCH</h2>
-
-            <p>
-                For appointments, enquiries or more information about our
-                services, please contact us using the details above.
-            </p>
-
-            <p>
-                You can also complete our enquiry form by clicking the
-                link below.
-            </p>
-
-            <p>
-                <a href="./enquiry.html">
-                    SEND AN ENQUIRY
-                </a>
-            </p>
-
-        </section>
-
-        <!-- Find Us -->
-        <section>
-
             <h2>FIND US</h2>
+
+            <p>
+                Visit LJ Fresh Stylez and let us give you a fresh, clean and
+                professional look.
+            </p>
 
             <address>
                 100 Harrington Street, Salt Lake, Gqeberha, South Africa
             </address>
 
             <div class="map-container">
-
-                <iframe
-                    src="https://www.google.com/maps?q=100+Harrington+Street,+Salt+Lake,+Gqeberha,+South+Africa&output=embed"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-
+                <div id="map" role="region" aria-label="Map showing the LJ Fresh Stylez location"></div>
             </div>
 
+            <p class="cta">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=100+Harrington+Street,+Salt+Lake,+Gqeberha,+South+Africa"
+                   target="_blank" rel="noopener">OPEN IN GOOGLE MAPS</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>SEND US A MESSAGE</h2>
+
+            <!-- PART 3: action added (the email is compiled and opened by js/main.js) -->
+            <form id="contact-form" action="mailto:ljfreshstylez@gmail.com" method="post" enctype="text/plain" novalidate>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name"
+                       placeholder="Enter your full name" minlength="2" maxlength="50" required>
+                <span class="error" id="name-error"></span>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" autocomplete="email"
+                       placeholder="Enter your email address" required>
+                <span class="error" id="email-error"></span>
+
+                <label for="phone">Phone Number (optional):</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel"
+                       placeholder="0661234567">
+                <span class="error" id="phone-error"></span>
+
+                <label for="type">Type of Message:</label>
+                <select id="type" name="type" required>
+                    <option value="">-- Select a type --</option>
+                    <option>General question</option>
+                    <option>Booking</option>
+                    <option>Compliment</option>
+                    <option>Complaint</option>
+                </select>
+                <span class="error" id="type-error"></span>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject"
+                       placeholder="Enter the subject" maxlength="100" required>
+                <span class="error" id="subject-error"></span>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6"
+                          placeholder="Enter your message here..."
+                          minlength="10" maxlength="500"
+                          required></textarea>
+                <span class="error" id="message-error"></span>
+
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+
+            <p id="contact-response" class="form-response" aria-live="polite" hidden></p>
+
+            <p class="cta">
+                Want to ask about a specific service?
+                <a href="enquiry.html">SEND AN ENQUIRY</a>
+            </p>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer>
-
-        <p>
-            &copy; 2026 LJ Fresh Stylez. All Rights Reserved.
-        </p>
-
+        <p>&copy; 2026 LJ Fresh Stylez. All Rights Reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

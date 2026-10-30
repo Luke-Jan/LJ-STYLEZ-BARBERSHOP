@@ -1,158 +1,113 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LJ FRESH STYLEZ | ENQUIRY</title>
-
+    <meta name="description" content="Send an enquiry to LJ Fresh Stylez in Salt Lake, Gqeberha about fade haircuts, beard grooming, prices and appointments.">
+    <title>LJ FRESH STYLEZ | MAKE AN ENQUIRY</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
     <header>
+        <p class="logo">LJ FRESH STYLEZ</p>
 
-        <!-- Business Name -->
-        <h2>LJ FRESH STYLEZ</h2>
-
-        <!-- Navigation links -->
         <nav>
-
             <a href="../index.html">HOME</a>
             <a href="about.html">ABOUT US</a>
             <a href="services.html">SERVICES</a>
-            <a href="enquiry.html">ENQUIRY</a>
+            <a href="enquiry.html" aria-current="page">ENQUIRY</a>
             <a href="contact.html">CONTACT US</a>
-
         </nav>
-
     </header>
 
-    <!-- Main section -->
     <main>
 
-        <!-- Enquiry Introduction -->
         <section>
-
-            <h1>
-                MAKE AN ENQUIRY
-            </h1>
+            <h1>MAKE AN ENQUIRY</h1>
 
             <p>
-                Do you have a question about our services, products or
-                appointments? Complete the enquiry form below and we will
-                get back to you.
+                Do you have a question about our services or appointments?
+                Complete the enquiry form below and we will get back to you.
             </p>
-
         </section>
 
-        <!-- Enquiry Form -->
         <section>
-
             <h2>ENQUIRY FORM</h2>
 
-            <form action="mailto:ljfreshstylez@gmail.com" method="post" enctype="text/plain">
+            <!-- Replace YOUR_FORM_ID with your Formspree form ID (see formspree.io) -->
+          <form id="enquiry-form" action="https://formspree.io/f/mdeedqzy" method="post" novalidate>
 
-                <!-- Name -->
+                <input type="hidden" name="_subject" value="New enquiry from the LJ Fresh Stylez website">
+
                 <label for="name">Full Name:</label>
-                <br>
-                <input type="text" id="name" name="name" required>
-                <br><br>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <span class="error" id="name-error"></span>
 
-                <!-- Email -->
                 <label for="email">Email Address:</label>
-                <br>
-                <input type="email" id="email" name="email" required>
-                <br><br>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="error" id="email-error"></span>
 
-                <!-- Phone -->
-                <label for="phone">Phone Number:</label>
-                <br>
-                <input type="tel" id="phone" name="phone" required>
-                <br><br>
+                <label for="phone">Phone Number (optional):</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="0661234567">
+                <span class="error" id="phone-error"></span>
 
-                <!-- Service -->
                 <label for="service">Select a Service:</label>
-                <br>
-
-                <select id="service" name="service">
-
+                <select id="service" name="service" required>
                     <option value="">-- Select a Service --</option>
-                    <option value="haircut">Classic Haircut</option>
-                    <option value="low-fade">Low Fade</option>
-                    <option value="mid-fade">Mid Fade</option>
-                    <option value="high-fade">High Fade</option>
-                    <option value="taper-fade">Taper Fade</option>
-                    <option value="beard">Beard Grooming</option>
-                    <option value="hair-styling">Hair Styling</option>
-
+                    <option value="other">Other / general question</option>
                 </select>
+                <span class="error" id="service-error"></span>
 
-                <br><br>
+                <label for="date">Preferred Date (optional):</label>
+                <input type="date" id="date" name="date">
+                <span class="error" id="date-error"></span>
 
-                <!-- Enquiry -->
                 <label for="message">Your Enquiry:</label>
-                <br>
-
-                <textarea id="message"
-                          name="message"
-                          rows="6"
-                          cols="40"
+                <textarea id="message" name="message" rows="6"
                           placeholder="Enter your enquiry here..."
                           required></textarea>
+                <span class="error" id="message-error"></span>
 
-                <br><br>
-
-                <!-- Submit button -->
-                <input type="submit" value="SUBMIT ENQUIRY">
-
-                <!-- Reset button -->
-                <input type="reset" value="CLEAR">
-
+                <button type="submit">SUBMIT ENQUIRY</button>
             </form>
 
+            <div id="enquiry-response" class="form-response" aria-live="polite" hidden></div>
         </section>
 
-        <!-- Contact Information -->
         <section>
-
             <h2>NEED TO CONTACT US DIRECTLY?</h2>
 
             <p>
-                Phone: 0661817197
+                <strong>Phone:</strong>
+                <a href="tel:+27661817197">066 181 7197</a>
             </p>
 
             <p>
-                Email: ljfreshstylez@gmail.com
+                <strong>Email:</strong>
+                <a href="mailto:ljfreshstylez@gmail.com">ljfreshstylez@gmail.com</a>
             </p>
 
             <p>
-                Address: 100 Harrington Street, Salt Lake, Gqeberha, South Africa
+                <strong>Address:</strong>
+                100 Harrington Street, Salt Lake, Gqeberha, South Africa
             </p>
 
-            <p>
-                <a href="./contact.html">
-                    VIEW CONTACT DETAILS
-                </a>
+            <p class="cta">
+                <a href="contact.html">VIEW CONTACT DETAILS</a>
             </p>
-
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer>
-
-        <p>
-            &copy; 2026 LJ Fresh Stylez. All Rights Reserved.
-        </p>
-
+        <p>&copy; 2026 LJ Fresh Stylez. All Rights Reserved.</p>
     </footer>
 
-<script src="../js/main.js" defer></script>
+    <script src="../js/services-data.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 
 </html>
-```

@@ -1,11 +1,10 @@
-/* Reset default browser spacing and box model so layout stays predictable */
+/* ===== Reset and base ===== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Base font, text colour and background for the whole site */
 body {
     font-family: 'Segoe UI', Verdana, sans-serif;
     color: #f1e9dc;
@@ -13,27 +12,28 @@ body {
     line-height: 1.6;
 }
 
-/* Keep images from overflowing their container and scale proportionally */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Remove default link styling and set brand colours */
+[hidden] {
+    display: none !important;
+}
+
 a {
     text-decoration: none;
     color: #c9a227;
 }
 
-/* Change link colour on hover/focus for interactivity */
 a:hover,
 a:focus {
     color: #e6c34a;
     text-decoration: underline;
 }
 
-
+/* ===== Typography ===== */
 h1 {
     color: #c9a227;
     text-transform: capitalize;
@@ -43,8 +43,7 @@ h1 {
     letter-spacing: 0.05rem;
     margin-bottom: 1rem;
 }
- 
-/* Style section subheadings, slightly softer gold than h1 */
+
 h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #e6c34a;
@@ -53,8 +52,7 @@ h2 {
     letter-spacing: 0.03rem;
     margin-bottom: 1rem;
 }
- 
-/* Style body text and limit line length for readability */
+
 p {
     color: #f1e9dc;
     font-family: 'Segoe UI', Verdana, sans-serif;
@@ -64,8 +62,11 @@ p {
     margin: 0 auto 1rem auto;
 }
 
+.cta {
+    text-align: center;
+}
 
-/* Header layout: stack logo above nav and centre everything */
+/* ===== Header and navigation ===== */
 header {
     display: flex;
     flex-direction: column;
@@ -73,32 +74,41 @@ header {
     padding: 1.5rem 1rem;
     background-color: #111111;
 }
- 
-header h2 {
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    font-weight: bold;
     color: #c9a227;
     margin-bottom: 0.75rem;
 }
- 
-/* Navigation links laid out in a row, wrapping on smaller screens */
+
 nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
 }
- 
+
 nav a {
     color: #f1e9dc;
     font-weight: bold;
     letter-spacing: 0.05rem;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
- 
+
 nav a:hover,
 nav a:focus {
     color: #e6c34a;
+    transform: translateY(-2px);
 }
- 
-/* Stack all page sections vertically with consistent spacing */
+
+nav a[aria-current="page"] {
+    color: #c9a227;
+    border-bottom: 2px solid #c9a227;
+}
+
+/* ===== Page layout ===== */
 main {
     display: flex;
     flex-direction: column;
@@ -106,17 +116,21 @@ main {
     max-width: 75rem;
     margin: 2rem auto;
     padding: 0 1.5rem;
+    animation: fadeIn 0.6s ease-in;
 }
- 
-/* Give each section a card-style appearance against the dark background */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+}
+
 section {
     background-color: #262220;
     border-radius: 0.5rem;
     padding: 2rem;
     border: 1px solid #3a332e;
 }
- 
-/* Turn service/grooming lists into a responsive grid of cards */
+
 section ul {
     list-style: none;
     display: grid;
@@ -124,8 +138,7 @@ section ul {
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
- 
-/* Style each service card */
+
 section ul li {
     text-align: center;
     background-color: #1f1c1a;
@@ -134,115 +147,20 @@ section ul li {
     border: 1px solid #3a332e;
     color: #f1e9dc;
 }
- 
-/* Make service images fill their card width with rounded corners */
-section ul li img {
-    margin: 0.75rem auto 0 auto;
-    border-radius: 0.4rem;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
- 
-/* Remove card styling for the homepage logo image section */
+
 .image-section {
     text-align: center;
     background: none;
     border: none;
     padding: 0;
 }
- 
-/* Widen the homepage logo while keeping it responsive and centred */
+
 .image-section img {
     width: 100%;
     max-width: 45rem;
     margin: 0 auto;
 }
- 
 
-/* Stack form fields vertically and centre the form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 30rem;
-    margin: 0 auto;
-    gap: 0.5rem;
-}
- 
-label {
-    text-align: left;
-    font-weight: bold;
-    color: #f1e9dc;
-}
- 
-/* Consistent styling for all input fields */
-input,
-select,
-textarea {
-    padding: 0.6rem;
-    border: 1px solid #3a332e;
-    border-radius: 0.3rem;
-    font-family: inherit;
-    font-size: 1rem;
-    background-color: #1f1c1a;
-    color: #f1e9dc;
-}
- 
-/* Highlight the active field with gold accent on focus */
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #c9a227;
-    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.3);
-}
- 
-/* Style submit/reset buttons and add a hover transition */
-input[type="submit"],
-input[type="reset"] {
-    cursor: pointer;
-    background-color: #c9a227;
-    color: #1a1a1a;
-    border: none;
-    font-weight: bold;
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    transition: background-color 0.2s ease-in-out;
-}
- 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #e6c34a;
-}
- 
-address {
-    text-align: center;
-    font-style: normal;
-    margin-bottom: 1rem;
-    color: #f1e9dc;
-}
- 
-/* Frame around the embedded map */
-.map-container {
-    background-color: #1f1c1a;
-    border: 2px solid #c9a227;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    max-width: 50rem;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Keep the embedded map responsive within its container */
-.map-container iframe {
-    width: 100%;
-    height: 25rem;
-    border-radius: 0.4rem;
-    border: 0;
-    display: block;
-}
- 
-/* Match footer styling to the header for visual consistency */
 footer {
     text-align: center;
     background-color: #111111;
@@ -251,88 +169,52 @@ footer {
     margin-top: 2rem;
 }
 
-
-/* Tablet breakpoint: stack nav vertically and reduce heading sizes */
-@media (max-width: 48rem) {
-    nav {
-        gap: 1rem;
-        flex-direction: column;
-        align-items: center;
-    }
- 
-    h1 {
-        font-size: 1.8rem;
-    }
- 
-    h2 {
-        font-size: 1.4rem;
-    }
- 
-    section {
-        padding: 1.25rem;
-    }
-}
- 
-/* Mobile breakpoint: shrink headings further and stack services grid */
-@media (max-width: 30rem) {
-    header h2 {
-        font-size: 1.3rem;
-    }
- 
-    h1 {
-        font-size: 1.5rem;
-    }
- 
-    form {
-        max-width: 100%;
-    }
- 
-    section ul {
-        grid-template-columns: 1fr;
-    }
-}
- 
-/* Contact Form */
+/* ===== Forms ===== */
 form {
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: 20px auto;
     padding: 25px;
+    gap: 0.25rem;
 }
 
-form label {
+label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    text-align: left;
     font-weight: bold;
+    color: #f1e9dc;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
 }
 
-form input,
-form textarea,
-form select {
+input,
+select,
+textarea {
     width: 100%;
     padding: 12px;
-    box-sizing: border-box;
-    background-color: #1f1c1a;
-    color: #f1e9dc;
     border: 1px solid #555;
     border-radius: 5px;
     font-family: inherit;
+    font-size: 1rem;
+    background-color: #1f1c1a;
+    color: #f1e9dc;
 }
 
-form input:focus,
-form textarea:focus,
-form select:focus {
+input:focus,
+select:focus,
+textarea:focus {
     outline: none;
     border-color: #c9a227;
+    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.3);
 }
 
-form textarea {
+textarea {
     resize: vertical;
 }
 
 form button {
     margin-top: 20px;
-    margin-right: 10px;
     padding: 12px 20px;
     background-color: #c9a227;
     color: #1f1c1a;
@@ -340,36 +222,72 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 form button:hover {
     opacity: 0.85;
+    transform: scale(1.03);
 }
 
-/* Map */
+.error {
+    display: block;
+    color: #ff8a80;
+    font-size: 0.9rem;
+    min-height: 1.1rem;
+}
+
+.form-response {
+    max-width: 600px;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+    border: 1px solid #c9a227;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+/* ===== Contact details and map ===== */
+address {
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 1rem;
+    color: #f1e9dc;
+}
+
 .map-container {
+    background-color: #1f1c1a;
+    border: 2px solid #c9a227;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
     width: 100%;
-    margin-top: 20px;
+    max-width: 50rem;
+    margin: 1.25rem auto 1rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
-    border-radius: 5px;
-}
 #map {
     width: 100%;
     height: 25rem;
     border-radius: 0.5rem;
 }
 
+/* ===== Services page ===== */
 .service-controls {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
     align-items: center;
     margin-bottom: 1.5rem;
+}
+
+.service-controls label {
+    margin: 0;
+}
+
+.service-controls input,
+.service-controls select {
+    width: auto;
+    padding: 0.6rem;
 }
 
 #services-list {
@@ -379,7 +297,10 @@ form button:hover {
 }
 
 .service-card {
-    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1c1a;
+    border: 1px solid #3a332e;
     border-radius: 0.5rem;
     padding: 1rem;
     text-align: center;
@@ -388,21 +309,131 @@ form button:hover {
 
 .service-card:hover {
     transform: translateY(-0.25rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .service-card img {
     width: 100%;
-    height: 12rem;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    aspect-ratio: 4 / 5;         /* same shape for every photo */
+    object-fit: cover;           /* fill the box, small crop */
+    object-position: center top; /* keeps faces and heads in view */
+    border-radius: 6px;
+    cursor: zoom-in;
+}
+
+.service-card h3 {
+    color: #e6c34a;
+    margin: 0.5rem 0;
+}
+
+.service-card p {
+    margin-bottom: 0.5rem;
+}
+
+.service-card a {
+    margin-top: auto;            /* pushes the link to the bottom of the card */
+}
+
+.service-category {
+    font-size: 0.85rem;
+    opacity: 0.7;
 }
 
 .service-price {
     font-weight: bold;
 }
 
+/* ===== FAQ accordion ===== */
+details {
+    background: #1f1c1a;
+    border: 1px solid #3a332e;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #e6c34a;
+}
+
+details p {
+    margin-top: 0.75rem;
+    text-align: left;
+}
+
+/* ---------- Part 3: gallery and lightbox ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 48rem) {
+    nav {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+
+    section { padding: 1.25rem; }
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 30rem) {
+    .logo { font-size: 1.3rem; }
+
+    h1 { font-size: 1.5rem; }
+
+    form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    section ul {
+        grid-template-columns: 1fr;
+    }
+
     #map {
         height: 18rem;
     }

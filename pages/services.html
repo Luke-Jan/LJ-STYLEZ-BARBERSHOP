@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LJ FRESH STYLEZ | SERVICES</title>
+    <meta name="description" content="Browse fade haircuts, classic cuts, beard grooming and shaving at LJ Fresh Stylez in Salt Lake, Gqeberha, with clear prices.">
+    <title>LJ FRESH STYLEZ | BARBER SERVICES AND PRICES</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
     <header>
+        <p class="logo">LJ FRESH STYLEZ</p>
 
-        <!-- Business Name -->
-        <h2>LJ FRESH STYLEZ</h2>
-
-        <!-- Navigation links -->
-      <nav>
-
+        <nav>
             <a href="../index.html">HOME</a>
             <a href="about.html">ABOUT US</a>
-            <a href="services.html">SERVICES</a>
+            <a href="services.html" aria-current="page">SERVICES</a>
             <a href="enquiry.html">ENQUIRY</a>
             <a href="contact.html">CONTACT US</a>
-
         </nav>
-
     </header>
 
-    <!-- Main section -->
     <main>
 
-        <!-- Services Introduction -->
         <section>
-
-            <h1>
-                OUR SERVICES
-            </h1>
+            <h1>OUR SERVICES</h1>
 
             <p>
                 At LJ Fresh Stylez, we provide professional barbering services
@@ -43,17 +34,19 @@
                 Our goal is to provide quality service while making every
                 customer feel comfortable and confident.
             </p>
-
         </section>
 
-        <!-- Dynamic Services (built by JavaScript) -->
         <section>
-
             <h2>BROWSE OUR SERVICES</h2>
 
             <div class="service-controls">
                 <label for="service-search">Search:</label>
                 <input type="search" id="service-search" placeholder="Search services...">
+
+                <label for="service-category">Category:</label>
+                <select id="service-category">
+                    <option value="all">All</option>
+                </select>
 
                 <label for="service-sort">Sort by:</label>
                 <select id="service-sort">
@@ -64,44 +57,83 @@
                 </select>
             </div>
 
-            <div id="services-list"></div>
-            <p id="no-results" hidden>No services match your search.</p>
+            <div id="services-list" aria-live="polite"></div>
+            <p id="no-results" hidden aria-live="polite">No services match your search.</p>
 
+            <noscript>
+                <p>
+                    Please enable JavaScript to see our full price list, or
+                    call us on <a href="tel:+27661817197">066 181 7197</a>.
+                </p>
+            </noscript>
         </section>
 
-        <!-- Enquiry Section -->
         <section>
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
 
-            <h2>
-                READY FOR A FRESH CUT?
-            </h2>
+            <details>
+                <summary>Do I need an appointment?</summary>
+                <p>
+                    Walk-ins are welcome, but booking through our enquiry form
+                    helps us keep your waiting time short.
+                </p>
+            </details>
 
-            <p style="text-align: center;">
+            <details>
+                <summary>How long does a fade take?</summary>
+                <p>
+                    Most fades take about 30 to 45 minutes, depending on the style.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I pay?</summary>
+                <p>
+                    Please contact us to confirm which payment methods we accept.
+                </p>
+            </details>
+        </section>
+
+        <section>
+            <h2>GALLERY</h2>
+
+            <div class="gallery">
+                <img src="../images/low fade.webp" alt="Low fade haircut" loading="lazy">
+                <img src="../images/mid fade.webp" alt="Mid fade haircut" loading="lazy">
+                <img src="../images/high fade.jpg" alt="High fade haircut" loading="lazy">
+                <img src="../images/taper fade.webp" alt="Taper fade haircut" loading="lazy">
+                <img src="../images/beard grooming.jpg" alt="Full beard grooming" loading="lazy">
+                <img src="../images/shaving.jpg" alt="Shave at the barber shop" loading="lazy">
+            </div>
+        </section>
+
+        <section>
+            <h2>READY FOR A FRESH CUT?</h2>
+
+            <p>
                 Contact LJ Fresh Stylez or send us an enquiry to find out
                 more about our services.
             </p>
 
-            <p style="text-align: center;">
-                <a href="./enquiry.html">
-                    MAKE AN ENQUIRY
-                </a>
+            <p class="cta">
+                <a href="enquiry.html">MAKE AN ENQUIRY</a>
+                |
+                <a href="contact.html">CONTACT US</a>
             </p>
-
         </section>
 
     </main>
 
-    <!-- Footer -->
+<div id="lightbox" class="lightbox" hidden>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
     <footer>
-
-        <p>
-            &copy; 2026 LJ Fresh Stylez. All Rights Reserved.
-        </p>
-
+        <p>&copy; 2026 LJ Fresh Stylez. All Rights Reserved.</p>
     </footer>
 
-<script src="../js/services-data.js" defer></script>
-<script src="../js/main.js" defer></script>
+    <script src="../js/services-data.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 
 </html>
