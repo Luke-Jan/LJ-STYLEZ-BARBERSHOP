@@ -1,5 +1,8 @@
 # LJ Fresh Stylez Website
 
+**Live website:** https://luke-jan.github.io/LJ-STYLEZ-BARBERSHOP/
+**GitHub repository:** https://github.com/Luke-Jan/LJ-STYLEZ-BARBERSHOP
+
 ## About the Website
 
 LJ Fresh Stylez is a barber shop website created to provide customers with information about the barber shop, its services and grooming products.
@@ -10,11 +13,11 @@ The website gives customers a way to learn about LJ Fresh Stylez, view the servi
 
 The website contains the following pages:
 
-- Home – introduction to the barbershop and quick links to other pages
+- Home – introduction to the barbershop, a photo gallery and quick links to other pages
 - About Us – the story, mission and values of LJ Fresh Stylez
-- Services – list of services offered with pricing and images
+- Services – list of services offered with pricing and images, with search, filter and sort tools
 - Enquiry – a form for customers to submit questions or booking enquiries
-- Contact Us – phone, email, address, business hours and a map
+- Contact Us – phone, email, address, business hours, an interactive map and a message form
 
 ## Services
 
@@ -49,6 +52,11 @@ LJ Fresh Stylez provides a variety of barbering and grooming services, including
 
 - HTML5
 - CSS3
+- JavaScript (ES6) – gallery lightbox, services search/filter/sort, form validation and form processing
+- Leaflet.js 1.9.4 – interactive map (Leaflet, n.d.)
+- Formspree – receives the enquiry form submissions (Formspree, n.d.)
+- Git and GitHub – version control
+- GitHub Pages – hosting (GitHub, n.d.)
 
 ## Project Structure
 
@@ -57,15 +65,28 @@ LJ STYLEZ BARBERSHOP
 │
 ├── index.html
 ├── README.md
+├── robot.txt
+├── sitemap.xml
 ├── .gitattributes
 │
 ├── css
 │   └── style.css
 │
+├── js
+│   ├── main.js
+│   └── services-data.js
+│
 ├── documents
+│   └── screenshots
+│       ├── home desktop.png
+│       ├── home mobile.png
+│       ├── home tablet.png
+│       ├── service desktop.png
+│       ├── service mobile.png
+│       └── service tablet.png
 │
 ├── images
-│   ├── barbershop logo.png
+│   ├── barbershop-Logo.png.png
 │   ├── beard grooming.jpg
 │   ├── classic cut.jpg
 │   ├── high fade.jpg
@@ -87,7 +108,9 @@ LJ STYLEZ BARBERSHOP
 
 ## How to View the Website
 
-Open `index.html` in a web browser. Use the navigation menu at the top of each page to move between pages.
+Visit the live website at https://luke-jan.github.io/LJ-STYLEZ-BARBERSHOP/.
+
+To view it on your own computer, open `index.html` in a web browser. Use the navigation menu at the top of each page to move between pages. An internet connection is needed for the interactive map and for sending the enquiry form.
 
 ## Author
 
@@ -95,11 +118,9 @@ Luke January
 
 ## References
 
-All images used on this website were Staken personally for this project. All HTML and CSS code was written independently.
+All images used on this website were taken personally for this project. All HTML and CSS code was written independently.
 
-The following external resource was used:
-
-- Google Maps Embed – used to embed the business location on the Contact page. https://www.google.com/maps
+The full, Harvard-style reference list for the external resources used is at the end of this document (see **Reference List**).
 
 ## Corrections Made (Part 1 Revisions)
 
@@ -140,123 +161,133 @@ Screenshots below show the website at desktop, tablet and mobile screen widths, 
 ### Home Page
 
 **Desktop (1440px)**
-[Home page desktop view](documents/screenshots/home desktop.png)
+[Home page desktop view](documents/screenshots/home%20desktop.png)
 
 
 **Tablet (768px)**
-[Home page tablet view](documents/screenshots/home tablet.png)
+[Home page tablet view](documents/screenshots/home%20tablet.png)
 
 **Mobile (400px)**
-[Home page mobile view](documents/screenshots/home mobile.png)
+[Home page mobile view](documents/screenshots/home%20mobile.png)
 
 ### Services Page
 
 **Desktop (1440px)**
-[Services page desktop view](documents/screenshots/service desktop.png)
+[Services page desktop view](documents/screenshots/service%20desktop.png)
 
 **Tablet (768px)**
-[Services page tablet view](documents/screenshots/service tablet.png)
+[Services page tablet view](documents/screenshots/service%20tablet.png)
 
 **Mobile (400px)**
-[Services page mobile view](documents/screenshots/service mobile.png)
+[Services page mobile view](documents/screenshots/service%20mobile.png)
 
 ---
 
 # Part 3 — Enhancing Functionality and SEO
 
-**Live website:** [ADD YOUR LIVE LINK HERE]
-**GitHub repository:** [ADD YOUR REPOSITORY LINK HERE]
+**Live website:** https://luke-jan.github.io/LJ-STYLEZ-BARBERSHOP/
+**GitHub repository:** https://github.com/Luke-Jan/LJ-STYLEZ-BARBERSHOP
 
 ## JavaScript Enhancements
 
+JavaScript is kept in the `js` folder and linked with the `defer` attribute, so it runs after the page has loaded. `services-data.js` holds the list of services and is used by the Home, Services and Enquiry pages. `main.js` holds the rest of the site's scripts.
+
 ### Interactive Elements
 
-- Tabs (Our Story / Mission / Values) on the About Us page.
-- Accordion (frequently asked questions, one panel open at a time) on the Contact Us page.
-- Image gallery with a lightbox (click to enlarge, next/previous buttons, Esc and arrow-key support).
-- Interactive map built with Leaflet and OpenStreetMap, with a marker and popup, on the Contact Us page.
-- Mobile navigation menu toggle and a back-to-top button on all pages.
-- "Open now / Closed now" badge calculated from the business hours.
+- **Gallery with lightbox (modal):** clicking any photo in the "Our Work" gallery on the Home page, the gallery on the Services page, or a service card photo opens the picture enlarged over a dark background. It closes when the visitor clicks anywhere or presses the Esc key.
+- **Interactive map:** the Contact Us page has a map built with Leaflet (Leaflet, n.d.). It can be zoomed and dragged, and it shows a marker with a popup giving the shop name and address. The map tiles come from Esri and the data from OpenStreetMap contributors (Esri, n.d.; OpenStreetMap contributors, n.d.). A link opens the same address in Google Maps for directions (Google, n.d.b).
+- **Expandable FAQ:** the Services page has a "Frequently Asked Questions" section where each answer opens and closes when the question is clicked. This uses the HTML `<details>` element (MDN Web Docs, n.d.b), so it needs no JavaScript.
 
 ### Animations and Transitions
 
-- Content fades and slides in as it scrolls into view.
-- Cards lift and images zoom slightly on hover.
-- Animations are switched off for visitors who have "reduce motion" enabled.
+- The page content fades in and slides up slightly when a page loads (CSS animation).
+- Service cards lift up and gallery photos zoom slightly when the mouse moves over them (CSS transitions).
+- Navigation links and form buttons change colour and size smoothly on hover and focus.
 
 ### Advanced DOM Manipulation
 
-- Elements are created and inserted with `document.createElement`.
-- Classes and ARIA attributes are updated dynamically.
-- User text is inserted with `textContent`, never `innerHTML`, to prevent script injection.
+- The service cards on the Services page are created in JavaScript with `document.createElement` and added to the page (MDN Web Docs, n.d.c).
+- The category filter and the "Select a Service" dropdown on the Enquiry page are built from the services list, so a new service added to `services-data.js` appears in both automatically.
+- Text from the visitor or the data is inserted with `textContent` (MDN Web Docs, n.d.e).
+- The lightbox is shown and hidden by changing the `hidden` attribute, and the clicked photo's file and description are copied into it.
 
 ### Dynamic Content, Search, Filter and Sort
 
-- The "Popular Services" section on the Home page is loaded with JavaScript.
-- The Services page has a live search box, category filter buttons (All, Haircuts, Beard, Grooming) and a sort menu (price low to high, price high to low, name A-Z).
-- A result counter and a "no results" message are shown.
+- The Services page builds its list of services from `services-data.js` instead of fixed HTML.
+- **Search:** a search box filters the services as the visitor types, matching the name, category or description.
+- **Filter:** a category menu (All, Haircuts, Beard, Extras) shows only the chosen group.
+- **Sort:** a sort menu orders the services by price (low to high or high to low) or by name (A to Z).
+- If nothing matches, the message "No services match your search." is shown.
+- Every service card has an "Enquire about this" link that opens the Enquiry page with that service already selected.
 
 ## Form Functionality and Validation
 
+Both forms use `novalidate`, so the website's own clear error messages are shown instead of the browser's pop-ups. The error message appears in red under the field with the problem, and is cleared and checked again each time the form is submitted.
+
 ### Enquiry Form (enquiry.html)
 
-- Fields: full name, email, phone number, service, preferred date, preferred time and an optional message.
-- After validation, the page shows the service cost, estimated time and whether the requested slot is within opening hours. The service data is loaded with `fetch` (AJAX) from `data/services.json`.
+- **Fields:** full name, email address, phone number (optional), service (dropdown), preferred date (optional) and the enquiry message.
+- **Response:** once the input passes validation, the page shows a response that includes the name of the service, its price and the shop's opening hours. If a preferred date was entered, it also says the shop will confirm availability for that date.
+- **AJAX submission:** the enquiry is sent with `fetch` to the Formspree address in the form's `action` attribute (MDN Web Docs, n.d.d; Formspree, n.d.). The page does not reload. A message tells the visitor if the enquiry was sent, or gives the shop's phone number if it failed. The form is cleared after a successful send.
+- The date picker does not allow dates in the past.
 
 ### Contact Form (contact.html)
 
-- Fields: full name, email, phone number, type of message and a full message.
-- After validation, the details are compiled into an email addressed to ljfreshstylez@gmail.com, with a preview and a "Send email" button.
-- Submission uses AJAX (`fetch`) so the page does not reload. A hidden honeypot field blocks spam.
+- **Fields:** full name, email address, phone number (optional), type of message (General question, Booking, Compliment or Complaint), subject and the message.
+- **Email:** once the input passes validation, the details are compiled into an email addressed to ljfreshstylez@gmail.com. The subject is the visitor's subject, and the body contains their name, email, phone number, type of message and message. The visitor's email app opens with the email filled in, and the visitor presses Send to deliver it.
+- A message under the form tells the visitor the email is ready to send.
 
 ### Validation Rules
 
 | Field | Rule |
 |---|---|
-| Name | Required, 2-50 characters, letters, spaces, hyphens and apostrophes only |
-| Email | Required, valid email format |
-| Phone | Required, valid South African number (0xx xxx xxxx or +27 xx xxx xxxx) |
-| Service / message type | Required selection |
-| Date | Required, valid date, not in the past, within 60 days |
-| Time | Required, within business hours for the chosen day |
-| Message | Required, minimum and maximum length with a live character counter |
+| Name | Required, at least 2 characters (contact form: no more than 50) |
+| Email | Required, must be in a valid format such as name@example.com |
+| Phone | Optional. If entered, it must be 10 digits starting with 0 (spaces are ignored) |
+| Service (enquiry form) | Required selection |
+| Type of message (contact form) | Required selection |
+| Subject (contact form) | Required, at least 3 characters (no more than 100) |
+| Preferred date (enquiry form) | Optional. Cannot be in the past |
+| Message | Required, at least 10 characters (contact form: no more than 500) |
 
-- HTML5 attributes (`required`, `type="email"`, `type="tel"`, `minlength`, `maxlength`) are used on all fields.
-- JavaScript validation runs on blur, while typing and on submit.
-- Error messages appear under each field, invalid fields are highlighted and the first invalid field receives focus.
-- Each form uses the `action` attribute to specify where the data is sent.
+- HTML5 attributes (`required`, `type="email"`, `type="tel"`, `minlength` and `maxlength`) are used on the form fields (MDN Web Docs, n.d.a).
+- JavaScript checks every field when the form is submitted, and the form is only processed when all fields are valid.
+- Each form uses the `action` attribute to say where the data goes: the enquiry form to Formspree, and the contact form to the shop's email address.
 
 ## Search Engine Optimisation (SEO)
 
 ### On-Page SEO
 
-- **Keyword research:** barber Gqeberha, barbershop Salt Lake Gqeberha, fade haircut Gqeberha, taper fade, beard trim, beard grooming, shaving, men's grooming. Keywords are used naturally in headings, text, alt text and meta tags.
-- **Title tags and meta descriptions:** every page has a unique title and meta description, plus Open Graph tags.
-- **Header tags:** one `<h1>` per page, with `<h2>` and `<h3>` in logical order.
-- **Image optimisation:** descriptive file names (e.g. `low-fade.webp`), meaningful alt text and `loading="lazy"`.
-- **URL structure:** short, lowercase, hyphenated file names.
-- **Internal linking:** pages link to each other through the navigation, footer and call-to-action buttons.
-- **Mobile-friendliness:** viewport meta tag, responsive breakpoints and a mobile menu.
-- **Structured data:** `BarberShop` JSON-LD added for local SEO.
+- **Keyword research:** the keywords chosen are barber shop Salt Lake Gqeberha, barber Gqeberha, fade haircut, classic haircut, taper fade, beard grooming and shaving. They are used naturally in page headings, paragraphs, image descriptions and the meta description of each page.
+- **Title tags:** each of the five pages has its own title that describes the page and includes the shop name, for example "LJ FRESH STYLEZ | BARBER SHOP IN SALT LAKE, GQEBERHA" for the Home page (Google, n.d.c).
+- **Meta descriptions:** each of the five pages has its own short description that mentions what the page offers and where the shop is (Google, n.d.a).
+- **Header tags:** every page has one `<h1>` for the page title, followed by `<h2>` section headings and `<h3>` headings where needed, in a logical order.
+- **Image optimisation:** every image has descriptive alt text, and the gallery and service card images use `loading="lazy"` so they only load when needed.
+- **URL structure:** the pages are in a `pages` folder with short, lowercase names such as `about.html`, `services.html`, `enquiry.html` and `contact.html`.
+- **Internal linking:** pages link to each other through the navigation menu and the call-to-action buttons (for example "View Our Services", "Make an Enquiry" and "Contact Us").
+- **Mobile-friendliness:** every page has the viewport meta tag, and the stylesheet uses responsive breakpoints for tablets and phones.
+- **Social sharing and local search data:** the Home, About Us and Contact Us pages include Open Graph tags and a canonical link, and the Home and Contact Us pages include `BarberShop` structured data in JSON-LD format with the shop's address, phone number, email and opening hours (Schema.org, n.d.).
 
 ### Off-Page SEO
 
-- **Backlinks:** list the business on free local directories, claim a Google Business Profile and ask local clients and community pages to link to the site.
-- **Social media:** share buttons added to the footer, and the website link is placed in the shop's social media bios.
-- **Local SEO:** the address and phone number are identical on every page and in the structured data.
+The following is the plan for promoting the website outside the site itself:
+
+- **Backlinks:** list LJ Fresh Stylez on free local business directories, claim a Google Business Profile, and ask local clients and community pages to link to the website.
+- **Social media:** put the website link in the shop's social media pages and share photos from the "Our Work" gallery with a link back to the site.
+- **Local SEO:** the shop name, address and phone number are written the same way everywhere they appear, and they match the structured data, so search engines can match the business to the same location.
 
 ### Additional SEO Requests
 
-- **robots.txt:** allows all crawlers and points to the sitemap.
-- **sitemap.xml:** lists the home page and the four pages in the `pages` folder.
-- **Page speed:** scripts use `defer`, images are lazy-loaded and no heavy frameworks are used.
-- **Security:** user input is never inserted with `innerHTML`, external links use `rel="noopener noreferrer"`, the contact form has a honeypot and the site is served over HTTPS.
+- **Crawler instructions:** `robot.txt` allows all search engines to crawl the site and points to the sitemap.
+- **Sitemap:** `sitemap.xml` lists the Home page and the four pages in the `pages` folder, using the live website addresses (Sitemaps.org, n.d.).
+- **Page speed:** the site's scripts use `defer`, the gallery and service card images load lazily, no large frameworks are used, and the Leaflet map files only load on the Contact Us page.
+- **Security:** the website is served over HTTPS by GitHub Pages, text from visitors and the data file is inserted with `textContent` instead of `innerHTML`, the external Google Maps link uses `rel="noopener"`, and the enquiry form is sent to Formspree over HTTPS.
 
 ## Deployment
 
-- **Platform:** [Netlify / GitHub Pages]
-- **Live link:** [ADD YOUR LIVE LINK HERE]
-- The GitHub repository is connected to the platform, so the site redeploys whenever changes are pushed to the main branch.
+- **Platform:** GitHub Pages (GitHub, n.d.)
+- **Live link:** https://luke-jan.github.io/LJ-STYLEZ-BARBERSHOP/
+- The website is published directly from the GitHub repository, so changes pushed to the published branch appear on the live website.
 
 ## Changelog
 
@@ -264,35 +295,56 @@ Screenshots below show the website at desktop, tablet and mobile screen widths, 
 
 | Feedback received | Change made | File(s) edited |
 |---|---|---|
-| [Paste Part 2 feedback point here] | [Describe exactly what you changed and why] | [e.g. css/style.css] |
-| [Paste Part 2 feedback point here] | [Describe exactly what you changed and why] | [e.g. pages/services.html] |
+| References (0/5): "Missing reference list." | Added a Harvard-style **Reference List** at the end of this README, listing every external resource used (Leaflet, Esri, OpenStreetMap, Formspree, Google, GitHub Pages, MDN Web Docs, Schema.org, Sitemaps.org and Google Search Central). In-text citations such as (Leaflet, n.d.) were added to the sections that use them, and the old References section now points to the list. | README.md |
+| README Document Contains All Relevant Information (3/5) | Expanded the README so it describes the finished website: added the live and repository links, updated the technologies and project structure to include the `js` folder, `sitemap.xml` and `robot.txt`, and added full Part 3 sections for JavaScript, forms and validation, SEO and deployment. | README.md |
 
 ### Part 3 Changes
 
-- Added a `js` folder with `main.js`, `services.js`, `forms.js` and `map.js`, linked with the `defer` attribute.
-- Added tabs on the About Us page, an accordion on the Contact Us page and a gallery with lightbox on the Home and Services pages.
-- Replaced the embedded Google Maps iframe with an interactive Leaflet map and kept a Google Maps directions link.
-- Added scroll animations, hover transitions and a back-to-top button, with a reduced-motion fallback.
-- Added a dynamically loaded "Popular Services" section on the Home page.
-- Added live search, category filtering and sorting on the Services page.
-- Added an "Open now / Closed now" badge on the Contact Us page.
-- Rebuilt the enquiry form with validation and a cost and availability response loaded through `fetch` from `data/services.json`.
-- Rebuilt the contact form with validation, a character counter, AJAX submission and a compiled email to ljfreshstylez@gmail.com.
-- Added error messages, field highlighting and focus on the first invalid field.
-- Added unique title tags, meta descriptions, Open Graph tags and canonical links to every page.
-- Reviewed heading structure and added keyword-based alt text to all images.
-- Added `BarberShop` JSON-LD structured data.
-- Added `robots.txt` and `sitemap.xml` to the project root.
-- Added social share buttons to the footer.
-- Added the `data` folder containing `services.json`.
-- Deployed the website to a free hosting platform.
-- Committed all changes with descriptive commit messages and pushed them to the remote repository.
+- Added a `js` folder with `main.js` and `services-data.js`, linked to the pages with the `defer` attribute.
+- Added a gallery with a lightbox to the Home and Services pages, and made the service card photos open in the lightbox too.
+- Replaced the embedded Google Maps iframe on the Contact Us page with an interactive Leaflet map with a marker and popup, and kept an "Open in Google Maps" link for directions.
+- Added the Services page search box, category menu and sort menu, and built the service cards in JavaScript from `services-data.js`, with a message when nothing matches.
+- Added an "Enquire about this" link on each service card that opens the Enquiry page with that service selected.
+- Rebuilt the Enquiry page form: the service dropdown is built from `services-data.js`, the date picker blocks past dates, and a response shows the service price and opening hours after validation.
+- Added JavaScript validation with error messages under each field to the Enquiry and Contact forms.
+- Added AJAX (`fetch`) submission of the Enquiry form to Formspree, with a message for success and for failure.
+- Added the Contact form email feature, which compiles the validated details into an email to ljfreshstylez@gmail.com and opens it in the visitor's email app.
+- Added gallery, lightbox, service card, filter and hover transition styles to `style.css`.
+- Added unique title tags and meta descriptions to all five pages, and Open Graph tags and canonical links to the Home, About Us and Contact Us pages.
+- Added `BarberShop` JSON-LD structured data to the Home and Contact Us pages.
+- Added descriptive alt text and lazy loading to the gallery and service images.
+- Added `sitemap.xml` and `robot.txt` to the project root.
+- Fixed the screenshot links in this README so they open (spaces in the file names are written as `%20`).
+- Published the website on GitHub Pages.
 
-## Part 3 References
+## Reference List
 
-- Leaflet.js: https://leafletjs.com
-- OpenStreetMap (© OpenStreetMap contributors): https://www.openstreetmap.org/copyright
-- Schema.org BarberShop: https://schema.org/BarberShop
-- Sitemaps protocol: https://www.sitemaps.org/protocol.html
-- Netlify: https://www.netlify.com
-- MDN Web Docs (Fetch API, form validation): https://developer.mozilla.org
+Esri (n.d.) *World Street Map* [Map tile service]. Available at: https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer (Accessed: 2 November 2026).
+
+Formspree (n.d.) *Formspree* [Online form service]. Available at: https://formspree.io (Accessed: 2 November 2026).
+
+GitHub (n.d.) *GitHub Pages documentation*. Available at: https://docs.github.com/en/pages (Accessed: 2 November 2026).
+
+Google (n.d.a) *Control your snippets in search results*. Google Search Central. Available at: https://developers.google.com/search/docs/appearance/snippet (Accessed: 2 November 2026).
+
+Google (n.d.b) *Google Maps*. Available at: https://www.google.com/maps (Accessed: 2 November 2026).
+
+Google (n.d.c) *Influencing your title links in Google Search*. Google Search Central. Available at: https://developers.google.com/search/docs/appearance/title-link (Accessed: 2 November 2026).
+
+Leaflet (n.d.) *Leaflet: an open-source JavaScript library for interactive maps*. Available at: https://leafletjs.com (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.a) *Constraint validation*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.b) *\<details\>: The Details disclosure element*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.c) *Document: createElement() method*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.d) *Fetch API*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API (Accessed: 2 November 2026).
+
+MDN Web Docs (n.d.e) *Node: textContent property*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent (Accessed: 2 November 2026).
+
+OpenStreetMap contributors (n.d.) *Copyright and license*. OpenStreetMap Foundation. Available at: https://www.openstreetmap.org/copyright (Accessed: 2 November 2026).
+
+Schema.org (n.d.) *BarberShop*. Available at: https://schema.org/BarberShop (Accessed: 2 November 2026).
+
+Sitemaps.org (n.d.) *Sitemaps XML format*. Available at: https://www.sitemaps.org/protocol.html (Accessed: 2 November 2026).
